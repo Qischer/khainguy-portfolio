@@ -13,8 +13,6 @@ const posts = (await getCollection("blog"))?.sort(
 
 Client.setToken(import.meta.env.VITE_GITHUB_ACCESS_TOKEN)
 const pinned = await Client.getPinnedRepos("Qischer");
-
-console.log(pinned)
 ---
 
 <script>
