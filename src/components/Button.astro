@@ -1,0 +1,15 @@
+---
+interface Props {
+  rounded?: boolean;
+}
+
+const { rounded } = Astro.props;
+---
+
+<button
+  class={`custom-btn shadow-md text-xl max-h-[50px] active:translate-x-[3px] active:translate-y-[3px] text-catppuccin-text px-5 py-2 hover:text-catppuccin-rosewater hover:border hover:border-catppuccin-rosewater transition-colors duration-100 ease-in-out bg-catppuccin-surface1 cursor-pointer ${
+    rounded ? "rounded-full" : "rounded-lg"
+  }`}
+>
+  <slot />
+</button>
